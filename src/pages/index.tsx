@@ -3,17 +3,23 @@ import Header from '@/components/Header'
 import { GetStaticProps } from 'next'
 import { SocialLink } from '@/typings/SocialLink';
 import { fetchSocialLinks } from '@/utils/fetchSocialLinks';
+import Hero from '@/components/Hero';
+import { fetchHeroData } from '@/utils/fetchHeroData';
+import { HeroData } from '@/typings/HeroData';
 
 type Props = {
-  socialLinks: SocialLink[]
+  socialLinks: SocialLink[],
+  heroData: HeroData
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const socialLinks: SocialLink[] = await fetchSocialLinks();
+  const heroData: HeroData = await fetchHeroData();
 
   return {
     props: {
-      socialLinks
+      socialLinks,
+      heroData
     }, 
     // Next.js will attempt to re-generate the page:
     // When a request come in
@@ -22,9 +28,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   }
 }
 
-export default function Home({socialLinks}: Props) {
+export default function Home({socialLinks, heroData}: Props) {
   return (
-    <>
+    <div className='bg-[rgb(42,42,42)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0'>
       <Head>
         <title>Portfolio</title>
         <meta name="description" content="My protfolio" />
@@ -36,7 +42,9 @@ export default function Home({socialLinks}: Props) {
         <Header socialLinks={socialLinks}/>
 
         {/* Hero */}
-        <section id="hero"></section>
+        <section id="hero" className='snap-center'>
+          <Hero words={heroData.typeWriterWords} src={heroData.src}/>
+        </section>
 
         {/* About */}
         <section id="about"></section>
@@ -54,6 +62,6 @@ export default function Home({socialLinks}: Props) {
         <section id="contact"></section>
 
       </main>
-    </>
+    </div>
   )
 }
