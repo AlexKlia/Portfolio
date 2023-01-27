@@ -8,7 +8,7 @@ import { BsTranslate } from "react-icons/bs"
 
 type Props = {
     title: string,
-    enterprise: string,
+    localization: string,
     langages?: string[],
     dateStart: string,
     dateStop?: string,
@@ -16,7 +16,7 @@ type Props = {
     src: string
 }
 
-export default function ExperienceCard({title, enterprise, langages, dateStart, dateStop, details, src}: Props) {
+export default function ExperienceCard({title, localization, langages, dateStart, dateStop, details, src}: Props) {
   return (
     <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-full md:w-1/2 xl:w-1/3 w snap-center bg-[#363636] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
          <Image
@@ -42,7 +42,7 @@ export default function ExperienceCard({title, enterprise, langages, dateStart, 
             className='px-0 md:px-10'
         >
             <h4 className='text-4xl font-light'>{title}</h4>
-            <p className='font-bold text-2xl mt-1'>{enterprise}</p>
+            <p className='font-bold text-2xl mt-1'>{localization}</p>
             <div className='flex item-center mx-auto text-center space-x-2 my-2'>
                 {langages?.map((param, index) => {
                     const color: string = '#139902';

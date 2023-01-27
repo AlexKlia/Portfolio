@@ -38,7 +38,7 @@ export default function WorkExperience({experiences}: Props) {
                             dateStart: new Intl.DateTimeFormat( 'en-US', { year: 'numeric', month: 'long'}).format(e.dateStart),
                             dateStop: dateStop,
                             details: e.details,
-                            enterprise: e.enterprise,
+                            localization: e.localization,
                             src: e.src
                         }
                     })
@@ -49,7 +49,7 @@ export default function WorkExperience({experiences}: Props) {
                                         dateStart={e.dateStart}
                                         dateStop={e.dateStop}
                                         details={e.details}
-                                        enterprise={e.enterprise}
+                                        localization={e.localization}
                                         src={e.src}
                         />
                     )

@@ -2,8 +2,8 @@
     {
         "id": 1,
         "title": "Web 2.0 Developer",
-        "src": "https://shdw-drive.genesysgo.net/CjscEgskhZAYCHuwYWz8uzL8EYbnLLpPyPyMNd5nHEMH/e26420c66eccd76a11931f110c87d9adf593060a.png",
-        "enterprise": "Axiocode",
+        "src": "https://arweave.net/qXsl56KtFpKRRLoe9QtWj7GYuhaUz6OYqfG2l6zpU5Q?ext=webp",
+        "localization": "Axiocode",
         "langages": [
             "angular",
             "typescript",
@@ -24,7 +24,7 @@
         "id": 2,
         "title": "Dropshipping",
         "src": "https://arweave.net/OMo4s06_E-k78DsjFWIRg0GOhbrAjIPoJ5jqEwq2EUk?ext=webp",
-        "enterprise": "Self-Employed Business",
+        "localization": "Self-Employed Business",
         "langages": [
             "shopify",
             "translate",
@@ -43,7 +43,7 @@
         "id": 3,
         "title": "Web 3.0 Developer",
         "src": "https://arweave.net/BXXGbHdQPGZA4zv_WY09_PnlW9DgdKuEBW6lJpKHGzs?ext=webp",
-        "enterprise": "Self-Employed Business",
+        "localization": "Self-Employed Business",
         "langages": [
             "react",
             "nextjs",
