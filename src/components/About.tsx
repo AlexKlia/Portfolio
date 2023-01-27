@@ -22,10 +22,10 @@ export default function About({about, src}: Props) {
         viewport={{once: true}}
         className='flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
     >
-        <h3 className='absolute top-24 uppercase tracking-[4.2px] text-gray-500 text-2xl'>About</h3>
+        <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>About</h3>
 
         <Image
-                className='-mb-20 md:mb-0 flex-shrink-0 h-56 w-56 rounded-full object-cover md:w-95 md:h-95 xl:w-[500px] xl:h-[500px]'
+                className='-mb-20 md:mb-0 flex-shrink-0 h-56 w-56 rounded-full object-cover md:w-72 md:h-72 xl:w-96 xl:h-96'
                 loader={() => src}
                 src={src}
                 alt="About section photo"

@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "title": "Web 2.0 Developer",
+        "src": "https://shdw-drive.genesysgo.net/CjscEgskhZAYCHuwYWz8uzL8EYbnLLpPyPyMNd5nHEMH/e26420c66eccd76a11931f110c87d9adf593060a.png",
+        "enterprise": "Axiocode",
+        "langages": [
+            "angular",
+            "typescript",
+            "symfony",
+            "sql"
+        ],
+        "dateStart": 1477970400000,
+        "dateStop": 1554085200000,
+        "details": [
+            "Developing an Angular 4 application",
+            "Gathering customer requirements",
+            "Development in Symfony 2-4 (API)",
+            "Managing SQL Server database"
+        ],
+        "isActive": true
+    },
+    {
+        "id": 2,
+        "title": "Dropshipping",
+        "src": "https://arweave.net/OMo4s06_E-k78DsjFWIRg0GOhbrAjIPoJ5jqEwq2EUk?ext=webp",
+        "enterprise": "Self-Employed Business",
+        "langages": [
+            "shopify",
+            "translate",
+            "fb"
+        ],
+        "dateStart": 1554085200000,
+        "dateStop": 1567304400000,
+        "details": [
+            "Creating, launching, and maintaining a Shopify website",
+            "Managing Facebook ads",
+            "Online sales of various products"
+        ],
+        "isActive": true
+    },
+    {
+        "id": 3,
+        "title": "Web 3.0 Developer",
+        "src": "https://arweave.net/BXXGbHdQPGZA4zv_WY09_PnlW9DgdKuEBW6lJpKHGzs?ext=webp",
+        "enterprise": "Self-Employed Business",
+        "langages": [
+            "react",
+            "nextjs",
+            "solidity",
+            "rust"
+        ],
+        "dateStart": 1669864800000,
+        "details": [
+            "Creating, launching, and maintaining a React website (this one !)",
+            "Developing some Solidity/Rust applications"
+        ],
+        "isActive": true
+    }
+]
