@@ -1,7 +1,7 @@
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCirecles from './BackgroundCircles'
-import Image, { ImageLoaderProps } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 
 type Props = {
