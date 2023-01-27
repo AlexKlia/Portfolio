@@ -3,23 +3,29 @@ import Header from '@/components/Header'
 import { GetStaticProps } from 'next'
 import { SocialLink } from '@/typings/SocialLink';
 import { fetchSocialLinks } from '@/utils/fetchSocialLinks';
+import { fetchAbout } from '@/utils/fetchAbout';
 import Hero from '@/components/Hero';
 import { fetchHeroData } from '@/utils/fetchHeroData';
+import { AboutData } from '@/typings/AboutData';
 import { HeroData } from '@/typings/HeroData';
+import About from '@/components/About';
 
 type Props = {
   socialLinks: SocialLink[],
-  heroData: HeroData
+  heroData: HeroData,
+  aboutData: AboutData
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const socialLinks: SocialLink[] = await fetchSocialLinks();
   const heroData: HeroData = await fetchHeroData();
+  const aboutData: AboutData = await fetchAbout();
 
   return {
     props: {
       socialLinks,
-      heroData
+      heroData,
+      aboutData
     }, 
     // Next.js will attempt to re-generate the page:
     // When a request come in
@@ -28,7 +34,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   }
 }
 
-export default function Home({socialLinks, heroData}: Props) {
+export default function Home({socialLinks, heroData, aboutData}: Props) {
   return (
     <div className='bg-[rgb(42,42,42)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0'>
       <Head>
@@ -42,12 +48,14 @@ export default function Home({socialLinks, heroData}: Props) {
         <Header socialLinks={socialLinks}/>
 
         {/* Hero */}
-        <section id="hero" className='snap-center'>
+        <section id="hero" className='snap-start'>
           <Hero words={heroData.typeWriterWords} src={heroData.src}/>
         </section>
 
         {/* About */}
-        <section id="about"></section>
+        <section id="about" className='snap-center'>
+          <About about={aboutData.about} src={aboutData.src}/>
+        </section>
 
         {/* Experience */}
         <section id="experience"></section>
