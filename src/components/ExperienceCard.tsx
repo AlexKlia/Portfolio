@@ -1,10 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { SiTypescript, SiMysql, SiSymfony, SiReact, SiSolidity, SiRust, SiAngular, SiShopify, SiFacebook } from "react-icons/si"
-import { TbBrandNextjs } from "react-icons/tb"
-import { GrLanguage } from "react-icons/gr"
-import { BsTranslate } from "react-icons/bs"
+import Skill from './Skill'
 
 type Props = {
     title: string,
@@ -44,38 +41,7 @@ export default function ExperienceCard({title, localization, langages, dateStart
             <h4 className='text-4xl font-light'>{title}</h4>
             <p className='font-bold text-2xl mt-1'>{localization}</p>
             <div className='flex item-center mx-auto text-center space-x-2 my-2'>
-                {langages?.map((param, index) => {
-                    const color: string = '#139902';
-                    const size: number = 32;
-
-                    switch(param.toLowerCase()) {
-                        case 'angular':
-                            return <SiAngular key={index} color={color} size={size} />;
-                        case 'typescript':
-                            return <SiTypescript key={index} color={color} size={size} />;
-                        case 'sql':
-                            return <SiMysql key={index} color={color} size={size} />;
-                        case 'symfony':
-                            return <SiSymfony key={index} color={color} size={size} />;
-                        case 'react':
-                            return <SiReact key={index} color={color} size={size} />;
-                        case 'nextjs':
-                            return <TbBrandNextjs key={index} color={color} size={size} />;
-                        case 'solidity':
-                            return <SiSolidity key={index} color={color} size={size} />;
-                        case 'rust':
-                            return <SiRust key={index} color={color} size={size} />;
-                        case 'shopify':
-                            return <SiShopify key={index} color={color} size={size} />;
-                        case 'translate':
-                            return <BsTranslate key={index} color={color} size={size} />;
-                        case 'fb':
-                            return <SiFacebook key={index} color={color} size={size} />;
-                        default:
-                            return <GrLanguage key={index} size={size} />
-                    }
-                }
-                )}
+                {langages?.map((langage, index) => <Skill skill={langage} key={index}/>)}
             </div>
             <p className='uppercase py-5 text-gray-300'>{dateStart} - {dateStop}</p>
             <ul className='list-disc space-y-4 ml-5 text-lg'>

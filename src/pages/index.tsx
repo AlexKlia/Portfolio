@@ -53,17 +53,14 @@ export default function Home({socialLinks, heroData, aboutData, experiences}: Pr
       <main>
         <Header socialLinks={socialLinks}/>
 
-        {/* Hero */}
         <section id="hero" className='snap-start'>
           <Hero words={heroData.typeWriterWords} src={heroData.src}/>
         </section>
 
-        {/* About */}
         <section id="about" className='snap-center'>
           <About about={aboutData.about} src={aboutData.src}/>
         </section>
 
-        {/* Experience */}
         <section id="experience" className='snap-center'>
           <WorkExperience experiences={experiences} />
         </section>
