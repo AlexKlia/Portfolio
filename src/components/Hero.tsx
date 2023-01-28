@@ -24,13 +24,13 @@ export default function Hero({ words, src }: Props) {
                 height={420}
             />
             <div className="z-20">
-                <h1 className="text-sm uppercase text-gray-500 pb-2 tracking-[4.2px]">Web Developer</h1>
-                <h2 className="text-5xl lg:text-6xl font-semibold px-10">
+                <h1 className="text-xs sm:text-sm uppercase text-gray-500 pb-2 tracking-[4.2px]">Web Developer</h1>
+                <h2 className="text-xl md:text-5xl lg:text-6xl font-semibold px-10 w-96 h-32 sm:h-44 lg:h-60 mx-auto">
                     <span className="mr-2">{text}</span>
                     <Cursor cursorColor="#139902" />
                 </h2>
 
-                <div className="pt-5">
+                <div className="pt-2 sm:pt-5 grid grid-cols-2 sm:grid-cols-4">
                     <Link href="#about">
                         <button className='heroButton'>About</button>
                     </Link>

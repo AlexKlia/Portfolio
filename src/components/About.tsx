@@ -25,7 +25,7 @@ export default function About({about, src}: Props) {
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>About</h3>
 
         <Image
-                className='-mb-20 md:mb-0 flex-shrink-0 h-56 w-56 rounded-full object-cover md:w-72 md:h-72 xl:w-96 xl:h-96'
+                className='-mb-20 absolute hidden sm:block top-52 xl:top-1/4 md:mb-0 flex-shrink-0 rounded-full object-cover sm:w-60 sm:h-60 xl:w-72 xl:h-72'
                 loader={() => src}
                 src={src}
                 alt="About section photo"
@@ -33,9 +33,9 @@ export default function About({about, src}: Props) {
                 height={420}
         />
 
-        <div className='space-y-10 px-0 md:px-10'>
+        <div className='space-y-10 px-0 md:px-10 absolute top-1/3 sm:top-2/4 xl:top-2/3 text-center'>
             <h4 className='text-4xl font-semibold'>Here is a <span className='underline decoration-[#139902]'>little</span> background</h4>
-            <p className='text-sm'>{about}</p>
+            <p className='text-sm text-left md:text-center px-4 overflow-y-scroll max-h-72 md:max-h-full sm:overflow-auto'>{about}</p>
         </div>
     </motion.div>
   )

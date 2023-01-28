@@ -63,11 +63,11 @@ export default function Home({socialLinks, heroData, aboutData, experiences, ski
           <Hero words={heroData.typeWriterWords} src={heroData.src}/>
         </section>
 
-        <section id="about" className='snap-center'>
+        <section id="about" className='snap-start'>
           <About about={aboutData.about} src={aboutData.src}/>
         </section>
 
-        <section id="experience" className='snap-center'>
+        <section id="experience" className='snap-start'>
           <WorkExperience experiences={experiences} />
         </section>
 

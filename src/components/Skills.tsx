@@ -28,7 +28,7 @@ export default function Skills({skills}: Props) {
 
         <h4 className='absolute top-36 uppercase tracking-[4.2px] text-gray-500 text-sm'>Hover over a skill for currency proficiency</h4>
 
-        <div className='grid grid-cols-3 gap-10 absolute top-56 '>
+        <div className='grid grid-cols-3 gap-10 absolute top-56'>
             {
                 skills?.filter(skill => skill.isActive)
                     .sort((a, b) => a.proficiency > b.proficiency ? -1 : 1)
