@@ -12,12 +12,16 @@ import About from '@/components/About';
 import WorkExperience from '@/components/WorkExperience';
 import { Experience } from '@/typings/Experience';
 import { fetchExperiences } from '@/utils/fetchExperiences';
+import Skills from '@/components/Skills';
+import { SkillData } from '@/typings/SkillData';
+import { fetchSkills } from '@/utils/fetchSkills';
 
 type Props = {
   socialLinks: SocialLink[],
   heroData: HeroData,
   aboutData: AboutData,
-  experiences: Experience[]
+  experiences: Experience[],
+  skills: SkillData[]
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -25,13 +29,15 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const heroData: HeroData = await fetchHeroData();
   const aboutData: AboutData = await fetchAbout();
   const experiences: Experience[] = await fetchExperiences();
+  const skills: SkillData[] = await fetchSkills();
 
   return {
     props: {
       socialLinks,
       heroData,
       aboutData,
-      experiences
+      experiences,
+      skills
     }, 
     // Next.js will attempt to re-generate the page:
     // When a request come in
@@ -40,7 +46,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   }
 }
 
-export default function Home({socialLinks, heroData, aboutData, experiences}: Props) {
+export default function Home({socialLinks, heroData, aboutData, experiences, skills}: Props) {
   return (
     <div className='bg-[rgb(33,33,33)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0'>
       <Head>
@@ -65,8 +71,9 @@ export default function Home({socialLinks, heroData, aboutData, experiences}: Pr
           <WorkExperience experiences={experiences} />
         </section>
 
-        {/* Skills */}
-        <section id="skills"></section>
+        <section id="skills" className='snap-start'>
+          <Skills skills={skills} />
+        </section>
 
         {/* Projects */}
         <section id="projects"></section>
