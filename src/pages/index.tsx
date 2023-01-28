@@ -42,7 +42,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 export default function Home({socialLinks, heroData, aboutData, experiences}: Props) {
   return (
-    <div className='bg-[rgb(42,42,42)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0'>
+    <div className='bg-[rgb(33,33,33)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0'>
       <Head>
         <title>Portfolio</title>
         <meta name="description" content="My protfolio" />

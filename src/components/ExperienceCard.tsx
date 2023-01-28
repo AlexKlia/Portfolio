@@ -15,7 +15,7 @@ type Props = {
 
 export default function ExperienceCard({title, localization, langages, dateStart, dateStop, details, src}: Props) {
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-full md:w-1/2 xl:w-1/3 w snap-center bg-[#363636] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-full md:w-1/2 xl:w-1/3 w snap-center bg-[#424242] p-10 opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 overflow-hidden'>
          <Image
                 className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
                 loader={() => src}

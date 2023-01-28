@@ -19,7 +19,9 @@ export default function WorkExperience({experiences}: Props) {
             opacity: 1
         }}
         transition={{duration: 1}}
-        viewport={{once: true}} className='flex flex-col relative h-screen text-left overflow-hidden md:flex-row max-w-full px-10 justify-evenly mx-auto items-center'>
+        viewport={{once: true}}
+        className='flex flex-col relative h-screen text-left overflow-hidden md:flex-row max-w-full px-10 justify-evenly mx-auto items-center'
+    >
         <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
             Experience
         </h3>
