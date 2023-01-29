@@ -15,13 +15,17 @@ import { fetchExperiences } from '@/utils/fetchExperiences';
 import Skills from '@/components/Skills';
 import { SkillData } from '@/typings/SkillData';
 import { fetchSkills } from '@/utils/fetchSkills';
+import Projects from '@/components/Projects';
+import { Project } from '@/typings/Project';
+import { fetchProjects } from '@/utils/fetchProjects';
 
 type Props = {
   socialLinks: SocialLink[],
   heroData: HeroData,
   aboutData: AboutData,
   experiences: Experience[],
-  skills: SkillData[]
+  skills: SkillData[],
+  projects: Project[]
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -30,6 +34,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const aboutData: AboutData = await fetchAbout();
   const experiences: Experience[] = await fetchExperiences();
   const skills: SkillData[] = await fetchSkills();
+  const projects: Project[] = await fetchProjects();
 
   return {
     props: {
@@ -37,7 +42,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       heroData,
       aboutData,
       experiences,
-      skills
+      skills,
+      projects
     }, 
     // Next.js will attempt to re-generate the page:
     // When a request come in
@@ -46,7 +52,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   }
 }
 
-export default function Home({socialLinks, heroData, aboutData, experiences, skills}: Props) {
+export default function Home({socialLinks, heroData, aboutData, experiences, skills, projects}: Props) {
   return (
     <div className='bg-[rgb(33,33,33)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0'>
       <Head>
@@ -76,7 +82,9 @@ export default function Home({socialLinks, heroData, aboutData, experiences, ski
         </section>
 
         {/* Projects */}
-        <section id="projects"></section>
+        <section id="projects" className='snap-start'>
+          <Projects projects={projects} />
+        </section>
 
         {/* Contact Me */}
         <section id="contact"></section>
