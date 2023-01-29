@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       skills,
       projects,
       contact
-    }, 
+    },
     // Next.js will attempt to re-generate the page:
     // When a request come in
     // at most once every 10 secondes  
@@ -60,7 +60,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   }
 }
 
-export default function Home({socialLinks, heroData, aboutData, experiences, skills, projects, contact}: Props) {
+export default function Home({ socialLinks, heroData, aboutData, experiences, skills, projects, contact }: Props) {
   return (
     <div className='bg-[rgb(33,33,33)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#139902]'>
       <Head>
@@ -71,46 +71,50 @@ export default function Home({socialLinks, heroData, aboutData, experiences, ski
       </Head>
 
       <main>
-        <Header socialLinks={socialLinks}/>
+        <Header socialLinks={socialLinks} />
 
         <section id="hero" className='snap-start'>
-          <Hero words={heroData.typeWriterWords} src={heroData.src}/>
+          <Hero words={heroData.typeWriterWords} src={heroData.src} />
         </section>
 
-        <section id="about" className='snap-start'>
-          <About about={aboutData.about} src={aboutData.src}/>
+        <section id="about" className='snap-center'>
+          <About about={aboutData.about} src={aboutData.src} />
         </section>
 
-        <section id="experience" className='snap-start'>
+        <section id="experience" className='snap-center'>
           <WorkExperience experiences={experiences} />
         </section>
 
-        <section id="skills" className='snap-start'>
+        <section id="skills" className='snap-center'>
           <Skills skills={skills} />
         </section>
 
-        <section id="projects" className='snap-start'>
+        <section id="projects" className='snap-center'>
           <Projects projects={projects} />
         </section>
 
-        <section id="contact" className='snap-end'>
+        <section id="contact" className='snap-center'>
           <ContactMe contact={contact} />
         </section>
 
-        <Link href="#hero">
-          <footer className='sticky bottom-5 w-full cursor-pointer'>
-            <div className='flex items-center justify-center'>
+        {/* This section is only needed for the smallest screen resolutions (Galaxy S8+ / Iphone SE) */}
+        <section className='snap-end h-44 sm:hidden'></section>
+        
+        <footer className='inline sticky bottom-5 w-full cursor-pointer'>
+          <span className='flex items-center justify-center'>
+            <Link href="#hero" className='z-0'>
               <Image
-                  className='rounded-full h-10 w-10 filter grayscale hover:grayscale-0'
-                  loader={() => heroData.src}
-                  src={heroData.src}
-                  alt="Photo de profil"
-                  width={420}
-                  height={420}
+                className='rounded-full h-10 w-10 filter grayscale hover:grayscale-0'
+                loader={() => heroData.src}
+                src={heroData.src}
+                alt="Photo de profil"
+                width={420}
+                height={420}
               />
-            </div>
-          </footer>
-        </Link>
+
+            </Link>
+          </span>
+        </footer>
       </main>
     </div>
   )
