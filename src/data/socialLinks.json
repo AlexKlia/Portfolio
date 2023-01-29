@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "url": "https://github.com/AlexKlia",
+        "isActive": true
+    },
+    {
+        "id": 2,
+        "url": "https://linkedin.com/in/alexandre-caliaro",
+        "isActive": true
+    },
+    {
+        "id": 3,
+        "url": "https://twitter.com/StonedBeater",
+        "isActive": true
+    },
+    {
+        "id": 4,
+        "url": "https://facebook.com/alexandre.caliaro",
+        "isActive": false
+    }
+]

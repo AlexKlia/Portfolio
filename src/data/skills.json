@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "title": "Angular",
+        "proficiency": 90,
+        "code": "angular",
+        "isActive": true
+    },
+    {
+        "id": 2,
+        "title": "Typescript",
+        "proficiency": 95,
+        "code": "typescript",
+        "isActive": true
+    },
+    {
+        "id": 3,
+        "title": "Next.js",
+        "proficiency": 80,
+        "code": "nextjs",
+        "isActive": true
+    },
+    {
+        "id": 4,
+        "title": "Anchor",
+        "proficiency": 42,
+        "code": "anchor",
+        "isActive": false
+    },
+    {
+        "id": 5,
+        "title": "English",
+        "proficiency": 75,
+        "code": "translate",
+        "isActive": true
+    },
+    {
+        "id": 6,
+        "title": "Symfony",
+        "proficiency": 65,
+        "code": "symfony",
+        "isActive": true
+    },
+    {
+        "id": 7,
+        "title": "SQL Server",
+        "proficiency": 60,
+        "code": "sql",
+        "isActive": true
+    },
+    {
+        "id": 8,
+        "title": "Shopify",
+        "proficiency": 50,
+        "code": "shopify",
+        "isActive": true
+    },
+    {
+        "id": 9,
+        "title": "Facebook Ads",
+        "proficiency": 50,
+        "code": "fb",
+        "isActive": true
+    },
+    {
+        "id": 10,
+        "title": "Solidity",
+        "proficiency": 60,
+        "code": "solidity",
+        "isActive": true
+    },
+    {
+        "id": 11,
+        "title": "Rust",
+        "proficiency": 60,
+        "code": "rust",
+        "isActive": true
+    },
+    {
+        "id": 12,
+        "title": "React.js",
+        "proficiency": 85,
+        "code": "React",
+        "isActive": true
+    }
+]
