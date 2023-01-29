@@ -35,7 +35,7 @@ export default function About({about, src}: Props) {
 
         <div className='space-y-10 px-0 md:px-10 absolute top-1/3 sm:top-2/4 xl:top-2/3 text-center'>
             <h4 className='text-4xl font-semibold'>Here is a <span className='underline decoration-[#139902]'>little</span> background</h4>
-            <p className='text-sm text-left md:text-center px-4 overflow-y-scroll max-h-72 md:max-h-full sm:overflow-auto'>{about}</p>
+            <p className='text-sm text-left md:text-center px-4 overflow-y-scroll max-h-72 md:max-h-full sm:overflow-auto scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#139902]'>{about}</p>
         </div>
     </motion.div>
   )

@@ -21,11 +21,11 @@ export default function Projects({ projects }: Props) {
             }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className='flex flex-col relative h-screen text-left md:flex-row max-w-full justify-evenly mx-auto items-center overflow-scroll sm:overflow-hidden z-0'
+            className='flex flex-col relative h-screen text-left md:flex-row max-w-full justify-evenly mx-auto items-center overflow-scroll sm:overflow-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#139902]'
         >
             <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Projects</h3>
 
-            <div className='relative top-36 sm:top-0 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
+            <div className='relative top-36 sm:top-0 w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#139902]'>
                 {filteredProject.map((project, index) =>
                     <div key={project.id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
                         <Image

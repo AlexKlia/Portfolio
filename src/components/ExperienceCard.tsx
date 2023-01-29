@@ -44,7 +44,7 @@ export default function ExperienceCard({title, localization, langages, dateStart
                 {langages?.map((langage, index) => <Skill id={index} skill={langage} key={index} className='w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7'/>)}
             </div>
             <p className='uppercase py-2 md:py-5 text-gray-300'>{dateStart} - {dateStop}</p>
-            <div className='overflow-auto max-h-60 md:max-h-full'>
+            <div className='overflow-auto max-h-60 md:max-h-full scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#139902]'>
                 <ul className='list-disc space-y-4 ml-5 text-lg'>
                     {details?.map((detail, i) =>
                         <li key={i}>{detail}</li>
