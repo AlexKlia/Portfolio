@@ -21,6 +21,8 @@ import { fetchProjects } from '@/utils/fetchProjects';
 import ContactMe from '@/components/ContactMe';
 import { Contact } from '@/typings/Contact';
 import { fetchContact } from '@/utils/fetchContact';
+import Link from 'next/link';
+import Image from 'next/image'
 
 type Props = {
   socialLinks: SocialLink[],
@@ -94,6 +96,21 @@ export default function Home({socialLinks, heroData, aboutData, experiences, ski
         <section id="contact" className='snap-end'>
           <ContactMe contact={contact} />
         </section>
+
+        <Link href="#hero">
+          <footer className='sticky bottom-5 w-full cursor-pointer'>
+            <div className='flex items-center justify-center'>
+              <Image
+                  className='rounded-full h-10 w-10 filter grayscale hover:grayscale-0'
+                  loader={() => heroData.src}
+                  src={heroData.src}
+                  alt="Photo de profil"
+                  width={420}
+                  height={420}
+              />
+            </div>
+          </footer>
+        </Link>
       </main>
     </div>
   )
