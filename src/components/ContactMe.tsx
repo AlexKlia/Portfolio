@@ -36,7 +36,6 @@ export default function ContactMe({ contact }: Props) {
         opacity: 1
       }}
       transition={{ duration: 1 }}
-      viewport={{ once: true }}
       className='flex flex-col relative h-screen text-center md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
     >
       <h3 className='absolute top-24 uppercase tracking-[10px] sm:tracking-[20px] text-gray-500 text-2xl'>Contact me</h3>
