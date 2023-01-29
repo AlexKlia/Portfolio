@@ -11,7 +11,7 @@ export default function Skills({skills}: Props) {
   return (
     <motion.div
         initial={{
-            x: -420,
+            x: -42,
             opacity: 0
         }}
         whileInView={{

@@ -91,9 +91,9 @@ export default function Skill({ id, skill, color, hovered, hoverColor, size, pro
         return getSkillElement(id, skill, color, hovered, hoverColor, size, className);
     } else {
         return (
-            <span className='rounded-full border border-[#14990227] px-5 py-5 md:px-6 md:py-6 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32'>
+            <div className='rounded-full border border-[#14990227] hover:border-[#139902] px-5 py-5 md:px-6 md:py-6 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32'>
                 {getSkillElement(id, skill, color, hovered, hoverColor, size, className, proficiency)}
-            </span>
+            </div>
         )
     }
 }
