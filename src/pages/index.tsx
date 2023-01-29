@@ -18,6 +18,9 @@ import { fetchSkills } from '@/utils/fetchSkills';
 import Projects from '@/components/Projects';
 import { Project } from '@/typings/Project';
 import { fetchProjects } from '@/utils/fetchProjects';
+import ContactMe from '@/components/ContactMe';
+import { Contact } from '@/typings/Contact';
+import { fetchContact } from '@/utils/fetchContact';
 
 type Props = {
   socialLinks: SocialLink[],
@@ -25,7 +28,8 @@ type Props = {
   aboutData: AboutData,
   experiences: Experience[],
   skills: SkillData[],
-  projects: Project[]
+  projects: Project[],
+  contact: Contact
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -35,6 +39,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const experiences: Experience[] = await fetchExperiences();
   const skills: SkillData[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
+  const contact: Contact = await fetchContact();
 
   return {
     props: {
@@ -43,7 +48,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       aboutData,
       experiences,
       skills,
-      projects
+      projects,
+      contact
     }, 
     // Next.js will attempt to re-generate the page:
     // When a request come in
@@ -52,7 +58,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   }
 }
 
-export default function Home({socialLinks, heroData, aboutData, experiences, skills, projects}: Props) {
+export default function Home({socialLinks, heroData, aboutData, experiences, skills, projects, contact}: Props) {
   return (
     <div className='bg-[rgb(33,33,33)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#139902]'>
       <Head>
@@ -81,15 +87,15 @@ export default function Home({socialLinks, heroData, aboutData, experiences, ski
           <Skills skills={skills} />
         </section>
 
-        {/* Projects */}
         <section id="projects" className='snap-start'>
           <Projects projects={projects} />
         </section>
 
-        {/* Contact Me */}
-        <section id="contact"></section>
-
+        <section id="contact" className='snap-end'>
+          <ContactMe contact={contact} />
+        </section>
       </main>
     </div>
   )
 }
+
